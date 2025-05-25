@@ -1,0 +1,3 @@
+Frame 8: Object 0 appears stopped at (198, 15)
+Frame 12: Unexpected object(s): tv
+Frame 18: Low traffic volume

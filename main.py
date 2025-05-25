@@ -42,6 +42,11 @@ def main(video_path="sample.mp4", frame_interval=5, max_frames=30, save_path="ou
         max_stationary_frames=5,
         min_traffic_threshold=1
     )
+    
+    with open("anomalies.txt", "w", encoding="utf-8") as f:
+        for i, anomaly in enumerate(anomalies):
+            if anomaly:
+                f.write(f"Frame {i + 1}: {anomaly}\n")
 
     print("📚 Building RAG base...")
     for i, text in enumerate(anomalies):
@@ -142,4 +147,4 @@ if __name__ == "__main__":
             context = rag.format_context(related_docs)
             full_prompt = f"Context from past frames:\n{context}\n\nQ: {user_query}"
             response = reasoner.ask(full_prompt)
-            print(f"\n🧠 Gemini RAG:\n{response}\n")
+            print(f"\n🧠 Qwen:\n{response}\n")
