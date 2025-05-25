@@ -23,6 +23,6 @@ class GeminiReasoner:
 
 # 🔁 Test
 if __name__ == "__main__":
-    reasoner = GeminiReasoner(api_key="AIzaSyCV077Q-1nwxMbPM_3f4Z1h1b7ZHjIBE78")
+    reasoner = GeminiReasoner(api_key="GEMINI_API_KEY")
     result = reasoner.ask("A person is walking in the middle of a highway. Is this safe?")
     print("Gemini Flash says:", result)
